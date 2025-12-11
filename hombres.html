@@ -1,62 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--configuraciones basicas-->
-    <title>Urban Threads U-Hombres</title>
-    <meta charset="UTF-8"> <!--codificacion-->
-    <meta name="viewport" content="width=device-width"> <!--sirve para ajustar en pantallas la pagina-->
-    <!-- Indica a los motores de búsqueda que indexen la página y sigan los enlaces -->
-    <meta name="robots" content="index, follow">
-    <!-- Define el color de la barra de herramientas del navegador en dispositivos móviles -->
-    <link rel="icon" type="image/jpg" href="imagenes/logo.jpg"><!--icono de la pagina web-->
-    <!--este es para que sea el nombre del link cuando ingresamos a la imagen-->
-    <link rel="canonical" href="https://UrbanThreads.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads - Hombres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
 </head>
 
 <body>
     <header>
-        <h1>Urban Threads - Hombres</h1>
-        <p>Explora nuestra exclusiva colección de ropa y accesorios para hombres.</p>
-        <a href="index.html">inicio</a> <p>Urban Threads Para Hombres</p>
-        <ul>
-            <li><a href="#tenis">Tenis</a></li>
-            <li><a href="#hoodies">Hoodies</a></li>
-            <li><a href="#camisetas">Camisetas</a></li>
-            <li><a href="#pantalones">Pantalones</a></li>
-        </ul>
+        <h1>HOMBRES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#tenis">Tenis</a></li>
+                <li><a href="#hoodies">Hoodies</a></li>
+                <li><a href="#camisetas">Camisetas</a></li>
+                <li><a href="#pantalones">Pantalones</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <h1>Ropa y Calzado para Hombre</h1> 
+        <h1>CATÁLOGO MASCULINO</h1> 
+        
         <section id="camisetas"> 
             <h2>Camisetas</h2>
-            
-            <article> 
-                <h3>Camiseta modelo "Tigre urbano"</h3>
-                <p>Precio: $25</p>
-                <a href="/producto/tigre">Ver detalles</a>
-            </article>
-            
-            <article> 
-                <h3>Camiseta modelo "Básico"</h3>
-                <p>Precio: $20</p>
-                <a href="/producto/basico">Ver detalles</a>
-            </article>
+            <div class="product-grid">
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Tigre+Urbano" alt="Camiseta">
+                    <h3>Modelo "Tigre urbano"</h3>
+                    <p>$25.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+                
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Basico+Tee" alt="Camiseta">
+                    <h3>Modelo "Básico"</h3>
+                    <p>$20.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+            </div>
         </section>
+
         <section id="tenis"> 
             <h2>Tenis</h2>
+            <div class="product-grid">
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Sneaker+X" alt="Tenis">
+                    <h3>Sneaker "Street"</h3>
+                    <p>$55.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+            </div>
         </section>
+
         <section id="hoodies"> 
-            <h2>Hoodies</h2>  
+            <h2>Hoodies</h2> 
+            <p>Próximamente...</p> 
         </section>
+
         <section id="pantalones"> 
-            <h2>Pantalones</h2>       
+            <h2>Pantalones</h2>   
+            <p>Próximamente...</p>    
         </section>
         
     </main>
 
-    <footer>
-        </footer>
-    
+    <footer style="text-align: center; padding: 20px; border-top: 4px solid black;">
+        <a href="index.html" class="btn">Volver al Inicio</a>
+    </footer>
 </body>
 </html>
