@@ -212,3 +212,91 @@ article p {
         flex-direction: column;
     }
 }
+
+/* Estilos para los Submenús (Dropdowns) */
+nav ul li {
+    position: relative; /* Necesario para posicionar el submenú */
+}
+
+/* Ocultar submenú por defecto */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-white);
+    border: var(--border-style);
+    min-width: 200px;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+/* Mostrar submenú al pasar el mouse (Hover) */
+nav ul li:hover > ul {
+    display: flex;
+}
+
+/* Estilo de los enlaces del submenú */
+nav ul li ul li a {
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+nav ul li ul li a:hover {
+    background-color: var(--accent-orange);
+    color: var(--primary-black);
+}
+/* --- ESTILOS PARA ÍCONOS DEL HEADER --- */
+
+.user-actions {
+    display: flex;
+    gap: 1.5rem; /* Espacio entre los íconos */
+    align-items: center;
+}
+
+.user-actions a {
+    color: var(--primary-black);
+    font-size: 1.2rem;
+    position: relative; /* Necesario para posicionar el contador */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: var(--accent-orange);
+}
+
+/* Contador del carrito (el círculo rojo) */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+}
+
+/* Ajuste Responsive: En móviles, ocultar menú y mostrar íconos */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}

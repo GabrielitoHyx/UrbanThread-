@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Threads - Inicio</title>
     <meta name="description" content="Moda Streetwear estilo 90s.">
-    <link rel="stylesheet" href="styles.css"> <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="style.css"> <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>   
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <h1>URBAN THREADS</h1>
-            <img src="imagenes/logo.jpg" alt="Logo" style="height: 50px;"> 
-        </div>     
+   <header>
+    <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin:0;">Urban Threads</h1>
+
         <nav>
             <ul>
                 <li><a href="index.html">HOGAR</a></li>
@@ -33,10 +34,27 @@
                         <li><a href="Mujer.html#pantalones">Pantalones</a></li>        
                     </ul>
                 </li>
+                <li><a href="servicios.html">SERVICIOS</a>
+                    <ul>
+                        <li><a href="servicios.html#Micuenta">Mi cuenta</a></li>
+                        <li><a href="servicios.html#Listadedeseos">Lista de Deseos</a></li>
+                        <li><a href="servicios.html#Sobrenosotros">Sobre nosotros</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-    </header>
 
+        <div class="user-actions">
+            <a href="servicios.html#Micuenta" title="Mi Cuenta">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" onclick="alert('Tu carrito está vacío (Simulación)')" title="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</header>
     <main>
         <section style="text-align: center; border: none;">
             <h2 style="font-size: 3rem; background: none; color: black; border: 4px solid black;">NUEVA COLECCIÓN 2024</h2>
