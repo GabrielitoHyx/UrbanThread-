@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Threads - Hombres</title>
+    <title>Detalle de Producto - Urban Threads</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
 </head>
-
 <body>
     <header>
     <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
@@ -57,53 +56,36 @@
 </header>
 
     <main>
-        <h1>CATÁLOGO MASCULINO</h1> 
+        <a href="javascript:history.back()" class="btn" style="margin-bottom: 20px;">&larr; Volver</a>
         
-        <section id="camisetas"> 
-            <h2>Camisetas</h2>
-            <div class="product-grid">
-                <article> 
-                    <img src="https://placehold.co/300x400/png?text=Tigre+Urbano" alt="Camiseta">
-                    <h3>Modelo "Tigre urbano"</h3>
-                    <p>$25.00</p>
-                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
-                </article>
+        <div class="detail-container">
+            <div class="detail-image">
+                <img src="https://placehold.co/600x600/png?text=Streetwear+Item" alt="Producto Detalle" style="width:100%; border: 3px solid black;">
+            </div>
+            
+            <div class="detail-info">
+                <h1>MODELO URBANO</h1>
+                <p style="font-size: 1.5rem; color: var(--orange); font-weight: bold;">$25.00</p>
+                <br>
+                <p>Esta prenda define el estilo de la calle. Fabricada con materiales de alta durabilidad y un corte oversize inspirado en los 90s. Edición limitada.</p>
+                <br>
+                <h3>TALLAS DISPONIBLES:</h3>
+                <div class="sizes" style="margin: 10px 0 20px 0;">
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
                 
-                <article> 
-                    <img src="https://placehold.co/300x400/png?text=Basico+Tee" alt="Camiseta">
-                    <h3>Modelo "Básico"</h3>
-                    <p>$20.00</p>
-                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
-                </article>
+                <a href="#" id="btn-agregar-carrito" style="display:block; background:#000; color:#fff; text-align:center; padding:1rem; text-decoration:none; text-transform:uppercase; font-weight:bold;">
+                   Añadir al Carrito
+                 </a>
             </div>
-        </section>
-
-        <section id="tenis"> 
-            <h2>Tenis</h2>
-            <div class="product-grid">
-                <article> 
-                    <img src="https://placehold.co/300x400/png?text=Sneaker+X" alt="Tenis">
-                    <h3>Sneaker "Street"</h3>
-                    <p>$55.00</p>
-                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
-                </article>
-            </div>
-        </section>
-
-        <section id="hoodies"> 
-            <h2>Hoodies</h2> 
-            <p>Próximamente...</p> 
-        </section>
-
-        <section id="pantalones"> 
-            <h2>Pantalones</h2>   
-            <p>Próximamente...</p>    
-        </section>
-        
+        </div>
     </main>
 
-    <footer style="text-align: center; padding: 20px; border-top: 4px solid black;">
-        <a href="index.html" class="btn">Volver al Inicio</a>
+    <footer style="text-align: center; padding: 20px; border-top: 4px solid black; margin-top: 50px;">
+        <p>&copy; 2025 URBAN THREADS EST. 90s</p>
     </footer>
     <script src="script.js"></script>
 </body>
