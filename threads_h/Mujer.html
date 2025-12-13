@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads - Mujeres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
+</head>
+
+<body>
+    <header>
+    <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin:0;">Urban Threads</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOGAR</a></li>
+                <li><a href="hombres.html">HOMBRE</a>
+                    <ul>
+                        <li><a href="hombres.html#tenis">Tenis</a></li>
+                        <li><a href="hombres.html#hoodies">Hoodies</a></li>
+                        <li><a href="hombres.html#camisetas">Camisetas</a></li>
+                        <li><a href="hombres.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li> 
+                <li><a href="Mujer.html">MUJER</a>
+                    <ul>
+                        <li><a href="Mujer.html#calzado">Calzado</a></li>
+                        <li><a href="Mujer.html#hoodies">Hoodies</a></li>
+                        <li><a href="Mujer.html#camisetas">Camisetas</a></li>
+                        <li><a href="Mujer.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li>
+                <li><a href="servicios.html">SERVICIOS</a>
+                    <ul>
+                        <li><a href="servicios.html#Micuenta">Mi cuenta</a></li>
+                        <li><a href="servicios.html#Listadedeseos">Lista de Deseos</a></li>
+                        <li><a href="servicios.html#Sobrenosotros">Sobre nosotros</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <a href="servicios.html#Micuenta" title="Mi Cuenta">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" onclick="alert('Tu carrito está vacío (Simulación)')" title="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <h1>CATÁLOGO FEMENINO</h1> 
+        
+        <section id="camisetas"> 
+            <h2>Camisetas</h2>
+            <div class="product-grid">
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Tigre+Fem" alt="Camiseta">
+                    <h3>Modelo "Tigre urbano"</h3>
+                    <p>$25.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Basico+Fem" alt="Camiseta">
+                    <h3>Modelo "Básico"</h3>
+                    <p>$20.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="calzado"> 
+            <h2>Calzado</h2>
+            <div class="product-grid">
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Botines" alt="Botines">
+                    <h3>Botines "Blckmamba"</h3>
+                    <p>$30.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Future+Sneaker" alt="Sneaker">
+                    <h3>Future sneaker "Básico"</h3>
+                    <p>$35.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="hoodies"> 
+            <h2>Hoodies</h2>
+            <div class="product-grid">  
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Camo+Hoodie" alt="Hoodie">
+                    <h3>Dyed crew neck "camo"</h3>
+                    <p>$25.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="pantalones"> 
+            <h2>Pantalones</h2>      
+            <div class="product-grid">
+                <article> 
+                    <img src="https://placehold.co/300x400/png?text=Jeans+Vaquero" alt="Pantalones">
+                    <h3>Pantalones Rectos "Vaquero"</h3>
+                    <p>$25.00</p>
+                    <a href="producto-detalle.html" class="btn">Ver detalles</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; border-top: 4px solid black;">
+        <a href="index.html" class="btn">Volver al Inicio</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
