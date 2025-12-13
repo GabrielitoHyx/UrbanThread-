@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Favoritos — Urban Threads</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="tenis-page">
+  <header class="container"><a href="hombres.html">← Volver</a></header>
+  <main class="container">
+    <h1>Favoritos</h1>
+    <div id="fav-root">
+      <p class="intro">Cargando favoritos…</p>
+    </div>
+  </main>
+  <script src="../scripts/cart.js"></script>
+  <script>
+    (function(){ function render(){ const root=document.getElementById('fav-root'); const f = utFavs.getFavs(); if(!f.length){ root.innerHTML = '<p>No tienes favoritos todavía.</p>'; return } let html = '<div class="product-grid">'; f.forEach(it=>{ html += `<article class="product-card" style="position:relative"><img src="${it.image}" alt="${it.name}"><div class="info"><h3>${it.name}</h3><p class="price"><strong>$--</strong></p><div style="margin-top:.6rem"><button class="btn btn-primary" data-add-id="${it.id}" data-add-name="${it.name}" data-add-price="0" data-add-image="${it.image}">Agregar</button><button class="btn" data-fav-id="${it.id}">Eliminar</button></div></div></article>` }); html += '</div>'; root.innerHTML = html; }
+      document.addEventListener('click', function(e){ const add = e.target.closest && e.target.closest('[data-add-id]'); if(add){ const item = { id:add.dataset.addId, name:add.dataset.addName, price:parseFloat(add.dataset.addPrice||0), image:add.dataset.addImage||'', qty:1, size:'M' }; addToCart(item); render(); toggleMiniCart(true); }
+        const del = e.target.closest && e.target.closest('[data-fav-id]'); if(del){ utFavs.toggleFav({ id: del.dataset.favId, name: del.dataset.favName || del.dataset.favId, image: del.dataset.favImage }); render(); }
+      });
+      render();
+    })();
+  </script>
+</body>
+</html>

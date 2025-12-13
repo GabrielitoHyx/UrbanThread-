@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cargo Relax — Urban Threads</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="container"><a href="pantalones_h.html">← Volver a Pantalones</a></header>
+  <main class="container">
+    <div class="product-detail">
+      <div class="gallery" id="g2">
+        <div class="slides">
+          <img src="../../imagenes/hombres/pantalones/descargar%20(2).jpg" alt="Cargo Relax">
+          <img src="../../imagenes/hombres/pantalones/WhatsApp%20Image%202025-12-13%20at%2012.44.28%20AM%20(6).jpeg" alt="Cargo Relax - detalle">
+        </div>
+        <div class="gallery-controls"><button data-dir="-1">‹</button><button data-dir="1">›</button></div>
+      </div>
+      <aside>
+        <h1>Cargo Relax</h1>
+        <p class="intro">Pantalón cargo con bolsillos funcionales y tejido reforzado.</p>
+        <p><strong>Precio:</strong> $55</p>
+        <p><strong>SKU:</strong> PT-002</p>
+        <form class="product-form">
+          <input type="hidden" name="id" value="pantalon-2">
+          <input type="hidden" name="name" value="Cargo Relax">
+          <input type="hidden" name="price" value="55">
+          <input type="hidden" name="image" value="../../imagenes/hombres/pantalones/descargar%20(2).jpg">
+          <label>Talla
+            <select name="size"><option>S</option><option selected>M</option><option>L</option><option>XL</option></select>
+          </label>
+          <label style="display:block;margin-top:.6rem">Cantidad
+            <input type="number" name="qty" value="1" min="1" style="width:68px">
+          </label>
+          <div style="margin-top:1rem;display:flex;gap:.6rem;align-items:center">
+            <button class="btn" type="submit">Agregar al carrito</button>
+            <a class="btn btn-primary" href="mailto:ventas@urbanthreads.example?subject=Compra%20-%20Cargo%20Relax">Comprar ahora</a>
+            <button type="button" class="btn ut-fav" data-fav-id="pantalon-2" data-fav-name="Cargo Relax" data-fav-image="../../imagenes/hombres/pantalones/descargar%20(2).jpg" aria-pressed="false" aria-label="Añadir a favoritos">❤</button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+  <script src="../../scripts/cart.js"></script>
+  <script>
+    (function(){const g=document.getElementById('g2');const slides=g.querySelectorAll('.slides img');let i=0;slides.forEach((s,idx)=>{s.style.display=idx?'none':'block';s.style.width='100%';});g.querySelectorAll('.gallery-controls button').forEach(b=>b.addEventListener('click',()=>{slides[i].style.display='none';i=(i+(b.dataset.dir|0)+slides.length)%slides.length;slides[i].style.display='block'}));})();
+  </script>
+</body>
+</html>

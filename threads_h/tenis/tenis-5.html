@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tenis Classic — Urban Threads</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="tenis-page">
+  <header class="container"><a href="tenis_h.html">← Volver a Tenis</a></header>
+  <main class="container">
+    <div class="product-detail">
+      <div class="gallery" id="tg5">
+        <div class="slides">
+          <img src="../../imagenes/hombres/tenis/tenis%20(2).jpg" alt="Tenis Classic">
+          <img src="../../imagenes/hombres/tenis/tenislogos.jpg" alt="Tenis Classic - detalle">
+        </div>
+        <div class="gallery-controls"><button data-dir="-1">‹</button><button data-dir="1">›</button></div>
+      </div>
+      <aside>
+        <h1>Tenis Classic</h1>
+        <p class="intro">Silueta clásica con visibilidad de logo y acabado premium.</p>
+        <p><strong>Precio:</strong> $88</p>
+        <p><strong>SKU:</strong> TN-005</p>
+        <form class="product-form">
+          <input type="hidden" name="id" value="tenis-5">
+          <input type="hidden" name="name" value="Tenis Classic">
+          <input type="hidden" name="price" value="88">
+          <input type="hidden" name="image" value="../../imagenes/hombres/tenis/tenis%20(2).jpg">
+          <label>Talla
+            <select name="size"><option>S</option><option selected>M</option><option>L</option><option>XL</option></select>
+          </label>
+          <label style="display:block;margin-top:.6rem">Cantidad
+            <input type="number" name="qty" value="1" min="1" style="width:68px">
+          </label>
+          <div style="margin-top:1rem;display:flex;gap:.6rem">
+            <button class="btn" type="submit">Agregar al carrito</button>
+            <button type="button" class="btn ut-fav" data-fav-id="tenis-5" data-fav-name="Tenis Classic" data-fav-image="../../imagenes/hombres/tenis/tenis%20(2).jpg" aria-pressed="false">❤</button>
+            <a class="btn btn-primary" href="mailto:ventas@urbanthreads.example?subject=Compra%20-%20Tenis%20Classic">Comprar ahora</a>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+  <script src="../../scripts/cart.js"></script>
+  <script>(function(){const g=document.getElementById('tg5');const slides=g.querySelectorAll('.slides img');let i=0;slides.forEach((s,idx)=>{s.style.display=idx?'none':'block';s.style.width='100%';});g.querySelectorAll('.gallery-controls button').forEach(b=>b.addEventListener('click',()=>{slides[i].style.display='none';i=(i+(b.dataset.dir|0)+slides.length)%slides.length;slides[i].style.display='block'}));})();</script>
+</body>
+</html>

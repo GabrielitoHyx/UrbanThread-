@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Graphic Edition B — Urban Threads</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="page-white">
+  <header class="container watermark-banner"><a href="camisetas_h.html">← Volver</a></header>
+  <main class="container">
+    <div class="product-detail">
+      <div class="gallery" id="g7">
+        <div class="slides">
+          <img src="../../imagenes/hombres/camisetas/WhatsApp%20Image%202025-12-13%20at%2012.44.27%20AM%20(2).jpeg" alt="Graphic B">
+          <img src="../../imagenes/hombres/camisetas/playera%20(4).jpg" alt="Graphic B - detalle">
+        </div>
+        <div class="gallery-controls"><button data-dir="-1">‹</button><button data-dir="1">›</button></div>
+      </div>
+      <aside>
+        <h1>Graphic Edition B</h1>
+        <p class="intro">Diseño vibrante con impresión duradera.</p>
+        <p><strong>Precio:</strong> $34</p>
+        <p><strong>SKU:</strong> CT-GRA-B07</p>
+        <form class="product-form">
+          <input type="hidden" name="id" value="camiseta-graphic-2">
+          <input type="hidden" name="name" value="Graphic Edition B">
+          <input type="hidden" name="price" value="34">
+          <input type="hidden" name="image" value="../../imagenes/hombres/camisetas/WhatsApp%20Image%202025-12-13%20at%2012.44.27%20AM%20(2).jpeg">
+          <label>Talla
+            <select name="size"><option>S</option><option selected>M</option><option>L</option><option>XL</option></select>
+          </label>
+          <label style="display:block;margin-top:.6rem">Cantidad
+            <input type="number" name="qty" value="1" min="1" style="width:68px">
+          </label>
+          <div style="margin-top:1rem;display:flex;gap:.6rem">
+            <button class="btn" type="submit">Agregar al carrito</button>
+            <a class="btn btn-primary" href="mailto:ventas@urbanthreads.example?subject=Compra%20-%20Graphic%20Edition%20B">Comprar ahora</a>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+  <script src="../../scripts/cart.js"></script>
+  <script>
+    (function(){const g=document.getElementById('g7');const slides=g.querySelectorAll('.slides img');let i=0;slides.forEach((s,idx)=>{s.style.display=idx?'none':'block';s.style.width='100%';});g.querySelectorAll('.gallery-controls button').forEach(b=>b.addEventListener('click',()=>{slides[i].style.display='none';i=(i+(b.dataset.dir|0)+slides.length)%slides.length;slides[i].style.display='block'}));})();
+  </script>
+</body>
+</html>
