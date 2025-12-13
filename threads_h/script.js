@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
             agregarAlCarrito();
         });
     }
+
+
 });
 
 function actualizarContadorVisual() {

@@ -5,27 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Threads - Mujeres</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
 </head>
 
 <body>
     <header>
-        <h1>MUJER</h1>
+    <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin:0;">Urban Threads</h1>
+
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#calzado">Calzado</a></li>
-                <li><a href="#hoodies">Hoodies</a></li>
-                <li><a href="#camisetas">Camisetas</a></li>
-                <li><a href="#pantalones">Pantalones</a></li>
+                <li><a href="index.html">HOGAR</a></li>
+                <li><a href="hombres.html">HOMBRE</a>
+                    <ul>
+                        <li><a href="hombres.html#tenis">Tenis</a></li>
+                        <li><a href="hombres.html#hoodies">Hoodies</a></li>
+                        <li><a href="hombres.html#camisetas">Camisetas</a></li>
+                        <li><a href="hombres.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li> 
+                <li><a href="Mujer.html">MUJER</a>
+                    <ul>
+                        <li><a href="Mujer.html#calzado">Calzado</a></li>
+                        <li><a href="Mujer.html#hoodies">Hoodies</a></li>
+                        <li><a href="Mujer.html#camisetas">Camisetas</a></li>
+                        <li><a href="Mujer.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li>
+                <li><a href="servicios.html">SERVICIOS</a>
+                    <ul>
+                        <li><a href="servicios.html#Micuenta">Mi cuenta</a></li>
+                        <li><a href="servicios.html#Listadedeseos">Lista de Deseos</a></li>
+                        <li><a href="servicios.html#Sobrenosotros">Sobre nosotros</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-    </header>
+
+        <div class="user-actions">
+            <a href="servicios.html#Micuenta" title="Mi Cuenta">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" onclick="alert('Tu carrito está vacío (Simulación)')" title="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</header>
 
     <main>
         <h1>CATÁLOGO FEMENINO</h1> 
         
-        <section id="camisetas"> 
+                <section id="camisetas"> 
             <h2>Camisetas</h2>
             <div class="product-grid">
                 <article> 
@@ -89,5 +123,6 @@
     <footer style="text-align: center; padding: 20px; border-top: 4px solid black;">
         <a href="index.html" class="btn">Volver al Inicio</a>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

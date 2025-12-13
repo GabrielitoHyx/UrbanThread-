@@ -4,68 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Urban Threads</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Estilos específicos para formularios de Urban Threads */
-        .auth-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-            justify-content: center;
-        }
-        .form-box {
-            background: #f9f9f9;
-            border: 3px solid #000;
-            padding: 2rem;
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-        .form-group input:focus {
-            border-color: #ff6600; /* Naranja corporativo */
-            outline: none;
-        }
-        .btn-submit {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            width: 100%;
-        }
-        .btn-submit:hover {
-            background-color: #ff6600;
-            color: #000;
-        }
-        
-        /* Estilo para la sección de historia */
-        .about-text {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-    </style>
 </head>
-
 <body>
     <header>
     <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
@@ -74,35 +15,15 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">HOGAR</a></li>
-                <li><a href="hombres.html">HOMBRE</a>
-                    <ul>
-                        <li><a href="hombres.html#tenis">Tenis</a></li>
-                        <li><a href="hombres.html#hoodies">Hoodies</a></li>
-                        <li><a href="hombres.html#camisetas">Camisetas</a></li>
-                        <li><a href="hombres.html#pantalones">Pantalones</a></li>        
-                    </ul>
-                </li> 
-                <li><a href="Mujer.html">MUJER</a>
-                    <ul>
-                        <li><a href="Mujer.html#calzado">Calzado</a></li>
-                        <li><a href="Mujer.html#hoodies">Hoodies</a></li>
-                        <li><a href="Mujer.html#camisetas">Camisetas</a></li>
-                        <li><a href="Mujer.html#pantalones">Pantalones</a></li>        
-                    </ul>
-                </li>
-                <li><a href="servicios.html">SERVICIOS</a>
-                    <ul>
-                        <li><a href="servicios.html#Micuenta">Mi cuenta</a></li>
-                        <li><a href="servicios.html#Listadedeseos">Lista de Deseos</a></li>
-                        <li><a href="servicios.html#Sobrenosotros">Sobre nosotros</a></li>
-                    </ul>
-                </li>
+                <li><a href="../index.html">HOGAR</a></li>
+                <li><a href="../threads_h/hombres.html">HOMBRE</a></li>
+                <li><a href="Mujer.html">MUJER</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
             </ul>
         </nav>
 
         <div class="user-actions">
-            <a href="servicios.html#Micuenta" title="Mi Cuenta">
+            <a href="#" title="Mi Cuenta">
                 <i class="fa-solid fa-user"></i>
             </a>
             <a href="#" onclick="alert('Tu carrito está vacío (Simulación)')" title="Carrito">
@@ -131,14 +52,14 @@
         <small id="error-password" class="error-text"></small>
     </div>
     
-    <button type="submit" class="btn-submit">Entrar al Barrio</button>
+    <button type="submit" class="btn">Entrar al Barrio</button>
 </form>
                 </div>
 
                 <div class="form-box">
                     <h3>¿Nuevo en las calles?</h3>
                     <p style="margin-bottom:1rem;">Regístrate para obtener drops exclusivos.</p>
-                    <button class="btn-submit" onclick="alert('Ir a formulario de registro completo (RF-CLI-1)')">Crear Cuenta</button>
+                    <button class="btn" onclick="alert('Ir a formulario de registro completo (RF-CLI-1)')">Crear Cuenta</button>
                 </div>
             </div>
         </section>
@@ -154,13 +75,13 @@
                     <img src="https://placehold.co/200x200/e0e0e0/111?text=Saved+Item" alt="Guardado">
                     <h3>Hoodie "Camo Spartan"</h3>
                     <p>$25.00</p>
-                    <a href="producto-detalle.html">Comprar Ahora</a>
+                    <a href="producto-detalle.html" class="btn">Comprar Ahora</a>
                 </article>
                 <article>
                     <img src="https://placehold.co/200x200/e0e0e0/111?text=Saved+Item" alt="Guardado">
                     <h3>Sneaker "Future"</h3>
                     <p>$35.00</p>
-                    <a href="producto-detalle.html">Comprar Ahora</a>
+                    <a href="producto-detalle.html" class="btn">Comprar Ahora</a>
                 </article>
             </div>
         </section>
@@ -180,7 +101,7 @@
                     nuestra misión es traer el estilo de la calle a tu guardarropa digital.
                 </p>
                 <br>
-                <img src="imagenes/logo.jpg" alt="Logo Urban Threads" style="max-width: 150px; border: 3px solid #000; margin-top: 1rem;">
+                <img src="../imagenes/logo.jpg" alt="Logo Urban Threads" style="max-width: 150px; border: 3px solid #000; margin-top: 1rem;">
             </div>
         </section>
 

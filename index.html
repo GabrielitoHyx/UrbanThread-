@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <header class="container site-header">
-        <button id="btn-burger" aria-label="Abrir menú" class="burger">☰</button>
+    <header class="container">
         <div class="branding">
             <a href="index.html"><img src="imagenes/generales/logo.jpg" alt="Logo" class="logo"></a>
             <div>
@@ -18,80 +17,21 @@
                 <p style="margin:0;color:var(--muted);">Estilo callejero sin compromisos</p>
             </div>
         </div>
-        <nav class="desktop-nav">
-          <ul class="main-nav">
-            <li class="nav-item nav-products" aria-haspopup="true">
-              <button id="products-toggle" class="nav-link" aria-expanded="false">Productos ▾</button>
-              <div class="mega-menu" id="products-menu" aria-hidden="true">
-                <div class="mega-grid">
-                  <a class="mega-card" href="threads_h/hombres.html">
-                    <img src="imagenes/generales/logo.jpg" alt="Hombres">
-                    <div class="mega-card-body"><h4>Hombres</h4><p>Tenis · Hoodies · Camisetas · Pantalones</p></div>
-                  </a>
-                  <a class="mega-card" href="Mujer.html">
-                    <img src="imagenes/generales/logo.jpg" alt="Mujer">
-                    <div class="mega-card-body"><h4>Mujer</h4><p>Colecciones seleccionadas</p></div>
-                  </a>
-                  <a class="mega-card" href="threads_h/tenis/tenis_h.html">
-                    <img src="imagenes/hombres/tenis/Onitsuka%20Tiger.jpg" alt="Tenis">
-                    <div class="mega-card-body"><h4>Tenis</h4><p>Ediciones clásicas y nuevas</p></div>
-                  </a>
-                  <a class="mega-card" href="threads_h/hoodies_h.html">
-                    <img src="imagenes/hombres/hoodies/hoodie1.jpg" alt="Hoodies">
-                    <div class="mega-card-body"><h4>Hoodies</h4><p>Capuchas y sudaderas premium</p></div>
-                  </a>
-                  <a class="mega-card" href="threads_h/camisetas/camisetas_h.html">
-                    <img src="imagenes/hombres/camisetas/playera.jpg" alt="Camisetas">
-                    <div class="mega-card-body"><h4>Camisetas</h4><p>Gráficos y básicos</p></div>
-                  </a>
-                  <a class="mega-card" href="threads_h/pantalones/pantalones_h.html">
-                    <img src="imagenes/hombres/pantalones/pantalon.webp" alt="Pantalones">
-                    <div class="mega-card-body"><h4>Pantalones</h4><p>Joggers, cargo, slim</p></div>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="cart.html">Carrito <span class="cart-badge">0</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="threads_h/favoritos.html" data-requires-login="true">Favoritos <span class="fav-count">0</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="Mujer.html">MUJER</a></li>
-          </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="threads_h/tenis/tenis_h.html">Tenis</a></li>
+                <li><a href="threads_h/hoodies_h.html">Hoodies</a></li>
+                <li><a href="threads_h/camisetas/camisetas_h.html">Camisetas</a></li>
+                <li><a href="threads_h/pantalones/pantalones_h.html">Pantalones</a></li>
+                <li><a href="threads_h/favoritos.html">Favoritos</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="Mujer.html">Mujer</a></li>
+                <li><a href="threads_h/servicios.html">Servicios</a></li>
+                <li><a href="threads_h/producto-detalle.html">Producto detalle</a></li>
+            </ul>
         </nav>
-        <div class="auth-controls">
-            <button id="btn-login" class="btn">Iniciar sesión</button>
-            <div id="user-menu" class="user-menu" hidden>
-                <span id="user-greet">Hola, <strong id="user-name"></strong></span>
-                <button id="btn-logout" class="btn">Cerrar sesión</button>
-            </div>
-        </div>
     </header>
-
-        <!-- Sidebar (mobile) -->
-        <aside id="site-sidebar" class="sidebar" aria-hidden="true">
-            <div class="sidebar-inner">
-                <button id="btn-sidebar-close" class="sidebar-close" aria-label="Cerrar menú">×</button>
-                <nav class="sidebar-nav">
-                    <ul>
-                        <li><a href="index.html">HOGAR</a></li>
-                        <li><button class="sidebar-toggle">HOMBRE ▾</button>
-                            <ul class="subnav">
-                                <li><a href="threads_h/tenis/tenis_h.html">Tenis</a></li>
-                                <li><a href="threads_h/hoodies_h.html">Hoodies</a></li>
-                                <li><a href="threads_h/camisetas/camisetas_h.html">Camisetas</a></li>
-                                <li><a href="threads_h/pantalones/pantalones_h.html">Pantalones</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="cart.html">Carrito</a></li>
-                        <li><a href="threads_h/favoritos.html" data-requires-login="true">Favoritos</a></li>
-                        <li><a href="Mujer.html">MUJER</a></li>
-                    </ul>
-                </nav>
-                <div class="sidebar-cta">
-                    <button id="btn-sidebar-login" class="btn btn-primary">Iniciar sesión</button>
-                    <button id="btn-sidebar-register" class="btn">Registrarse</button>
-                </div>
-            </div>
-        </aside>
-        <div id="sidebar-backdrop" class="backdrop" hidden></div>
 
     <main>
         <section style="text-align: center; border: none;">
@@ -102,27 +42,52 @@
         </section>
     </main>
     
-    <footer style="text-align: center; padding: 20px; border-top: 4px solid black;">
-        <p>&copy; 2024 URBAN THREADS</p>
-    </footer>
-        <!-- Login modal -->
-        <div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-            <div class="modal-content" role="document">
-                <button class="modal-close" aria-label="Cerrar">×</button>
-                <h2 id="auth-title">Iniciar sesión</h2>
-                <form id="auth-form">
-                    <label>Correo electrónico<br><input type="email" name="email" required></label>
-                    <label>Contraseña<br><input type="password" name="password" required></label>
-                    <label style="display:flex;align-items:center;margin-top:.6rem"><input type="checkbox" name="remember"> Recordarme</label>
-                    <div style="margin-top:1rem;display:flex;gap:.6rem;align-items:center">
-                        <button class="btn btn-primary" type="submit">Entrar</button>
-                        <button type="button" id="switch-mode" class="btn">Crear cuenta</button>
-                        <button type="button" class="btn modal-close">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <script src="scripts/auth.js"></script>
-    <script src="scripts/ui.js"></script>
+    <footer>
+        <div class="footer-contenido"> 
+            
+            <section class="footer-columna">
+                <h3>Urban Threads</h3>
+                <p>Moda urbana y de rendimiento de alta calidad, diseñada para la vida moderna.</p>
+                
+                <p class="copyright">
+                    &copy; 2025 Urban Threads. Todos los derechos reservados.
+                </p>
+            </section>
+
+            <section class="footer-columna">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="servicios/contacto.html">Contáctanos</a></li>
+                    <li><a href="servicios/faq.html">Preguntas Frecuentes (FAQ)</a></li>
+                    <li><a href="servicios/cambios.html">Cambios y Devoluciones</a></li>
+                    <li><a href="servicios/envios.html">Información de Envíos</a></li>
+                    <li><a href="servicios/guia-tallas.pdf">Guía de Tallas (PDF)</a></li> 
+                </ul>
+            </section>
+
+            <section class="footer-columna">
+                <h3>Información Legal</h3>
+                <ul>
+                    <li><a href="legal/terminos.html">Términos y Condiciones</a></li>
+                    <li><a href="legal/privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="legal/cookies.html">Política de Cookies</a></li>
+                    <li><a href="legal/mapa-sitio.html">Mapa del Sitio</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-columna">
+                <h3>Síguenos</h3>
+                <div class="redes-sociales">
+                    <a href="https://instagram.com/UrbanThreads" aria-label="Instagram de Urban Threads">Instagram</a>
+                    <a href="https://facebook.com/UrbanThreads" aria-label="Facebook de Urban Threads">Facebook</a>
+                    <a href="https://twitter.com/UrbanThreads" aria-label="Twitter de Urban Threads">Twitter/X</a>
+                </div>
+                
+                <h3>Métodos de Pago</h3>
+                <p>Aceptamos Visa, Mastercard, PayPal y más.</p>
+                </section>
+
+        </div> </footer>
+    
 </body>
 </html>
