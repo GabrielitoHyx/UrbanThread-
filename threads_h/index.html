@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads - Inicio</title>
+    <meta name="description" content="Moda Streetwear estilo 90s.">
+    <link rel="stylesheet" href="style.css"> <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+   <header>
+    <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <h1 style="margin:0;">Urban Threads</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOGAR</a></li>
+                <li><a href="hombres.html">HOMBRE</a>
+                    <ul>
+                        <li><a href="hombres.html#tenis">Tenis</a></li>
+                        <li><a href="hombres.html#hoodies">Hoodies</a></li>
+                        <li><a href="hombres.html#camisetas">Camisetas</a></li>
+                        <li><a href="hombres.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li> 
+                <li><a href="Mujer.html">MUJER</a>
+                    <ul>
+                        <li><a href="Mujer.html#calzado">Calzado</a></li>
+                        <li><a href="Mujer.html#hoodies">Hoodies</a></li>
+                        <li><a href="Mujer.html#camisetas">Camisetas</a></li>
+                        <li><a href="Mujer.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li>
+                <li><a href="servicios.html">SERVICIOS</a>
+                    <ul>
+                        <li><a href="servicios.html#Micuenta">Mi cuenta</a></li>
+                        <li><a href="servicios.html#Listadedeseos">Lista de Deseos</a></li>
+                        <li><a href="servicios.html#Sobrenosotros">Sobre nosotros</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <a href="servicios.html#Micuenta" title="Mi Cuenta">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" onclick="alert('Tu carrito está vacío')" title="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+    <main>
+        <section style="text-align: center; border: none;">
+            <h2 style="font-size: 3rem; background: none; color: black; border: 4px solid black;">NUEVA COLECCIÓN 2025</h2>
+            <p>ESTILO CALLEJERO SIN COMPROMISOS</p>
+            <br>
+            <img src="https://placehold.co/1200x400/000000/FFFFFF/png?text=URBAN+THREADS+BANNER" alt="Banner" style="width: 100%; border: 3px solid black;">
+        </section>
+    </main>
+    
+    <footer style="text-align: center; padding: 20px; border-top: 4px solid black;">
+        <p>&copy; 2025 URBAN THREADS</p>
+    </footer>
+    <script src="script.js"></script>
+    <div id="cart-overlay" class="overlay"></div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>TU CARRITO</h2>
+        <button id="close-cart" class="close-cart-btn">&times;</button>
+    </div>
+    <div id="cart-items-container" class="cart-items">
+        </div>
+    <div class="cart-footer">
+        <div class="total-row">
+            <span>TOTAL:</span>
+            <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn" style="width:100%; border-color:white;">PAGAR AHORA</button>
+    </div>
+</div>
+</body>
+</html>

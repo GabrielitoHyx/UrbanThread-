@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de Producto - Urban Threads</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
 </head>
@@ -47,7 +47,7 @@
             <a href="servicios.html#Micuenta" title="Mi Cuenta">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <a href="#" onclick="alert('Tu carrito está vacío (Simulación)')" title="Carrito">
+            <a href="#" onclick="alert('Tu carrito está vacío')" title="Carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-count">0</span>
             </a>
@@ -56,37 +56,103 @@
 </header>
 
     <main>
-        <a href="javascript:history.back()" class="btn" style="margin-bottom: 20px;">&larr; Volver</a>
-        
-        <div class="detail-container">
-            <div class="detail-image">
-                <img src="https://placehold.co/600x600/png?text=Streetwear+Item" alt="Producto Detalle" style="width:100%; border: 3px solid black;">
-            </div>
-            
-            <div class="detail-info">
-                <h1>MODELO URBANO</h1>
-                <p style="font-size: 1.5rem; color: var(--orange); font-weight: bold;">$25.00</p>
-                <br>
-                <p>Esta prenda define el estilo de la calle. Fabricada con materiales de alta durabilidad y un corte oversize inspirado en los 90s. Edición limitada.</p>
-                <br>
-                <h3>TALLAS DISPONIBLES:</h3>
-                <div class="sizes" style="margin: 10px 0 20px 0;">
-                    <button>S</button>
-                    <button>M</button>
-                    <button>L</button>
-                    <button>XL</button>
-                </div>
-                
-                <a href="#" id="btn-agregar-carrito" style="display:block; background:#000; color:#fff; text-align:center; padding:1rem; text-decoration:none; text-transform:uppercase; font-weight:bold;">
-                   Añadir al Carrito
-                 </a>
-            </div>
+    <a href="javascript:history.back()" class="btn" style="margin-bottom: 20px;">&larr; VOLVER</a>
+    
+    <div class="detail-container">
+        <div class="detail-image">
+            <img id="main-image" src="https://placehold.co/600x600/png?text=Streetwear+Item" 
+                 alt="Producto Detalle" 
+                 style="width:100%; border: 3px solid black; cursor: zoom-in;">
+            <p style="text-align:center; font-size:0.8rem; margin-top:5px; opacity:0.6;">(Click para ampliar)</p>
         </div>
-    </main>
+        
+        <div class="detail-info">
+    <h1 id="product-title">MODELO URBANO</h1>
+    <p id="product-price" style="font-size: 1.5rem; color: var(--orange); font-weight: bold;">$25.00</p>
+    <br>
+    <p>Esta prenda define el estilo de la calle. Fabricada con materiales de alta durabilidad.</p>
+    <br>
+    
+    <h3>TALLAS DISPONIBLES:</h3>
+    <div class="sizes" style="margin: 10px 0 20px 0;">
+        <button class="size-btn" data-size="S">S</button>
+        <button class="size-btn" data-size="M">M</button>
+        <button class="size-btn" data-size="L">L</button>
+        <button class="size-btn" data-size="XL">XL</button>
+    </div>
+    
+    <div style="display: flex; gap: 10px; align-items: center;">
+        <button id="add-to-cart-btn" class="btn" style="flex: 1; padding:15px; font-size:1.1rem;">
+           AÑADIR AL CARRITO
+        </button>
+        <button id="wishlist-btn" class="btn" style="background: white; color: black; border: 3px solid black; padding: 12px 18px;">
+            <i class="fa-regular fa-heart" id="wishlist-icon" style="font-size: 1.5rem;"></i>
+        </button>
+    </div>
+</div>
+
+<div class="reviews-section" style="margin-top: 60px; border-top: 4px solid black; padding-top: 40px;">
+    <h2>OPINIONES DEL BARRIO</h2>
+    
+    <div class="review-form-box">
+        <h3>Deja tu huella</h3>
+        <div class="star-rating">
+            <i class="fa-solid fa-star star" data-value="1"></i>
+            <i class="fa-solid fa-star star" data-value="2"></i>
+            <i class="fa-solid fa-star star" data-value="3"></i>
+            <i class="fa-solid fa-star star" data-value="4"></i>
+            <i class="fa-solid fa-star star" data-value="5"></i>
+        </div>
+        <textarea id="review-text" placeholder="¿Qué tal te pareció el drop? (Mínimo 10 caracteres)"></textarea>
+        <button id="submit-review" class="btn" style="margin-top: 10px;">PUBLICAR RESEÑA</button>
+    </div>
+
+    <div id="reviews-list" class="reviews-list">
+        </div>
+</div>
+    </div>
+</main>
+     <div id="image-modal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="img-in-modal">
+</div>
+
+<div id="cart-overlay" class="overlay"></div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>TU CARRITO</h2>
+        <button id="close-cart" class="close-cart-btn">&times;</button>
+    </div>
+    <div id="cart-items-container" class="cart-items">
+        </div>
+    <div class="cart-footer">
+        <div class="total-row">
+            <span>TOTAL:</span>
+            <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn" style="width:100%; border-color:white;">PAGAR AHORA</button>
+    </div>
+</div>
 
     <footer style="text-align: center; padding: 20px; border-top: 4px solid black; margin-top: 50px;">
         <p>&copy; 2025 URBAN THREADS EST. 90s</p>
     </footer>
     <script src="script.js"></script>
+    <div id="cart-overlay" class="overlay"></div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>TU CARRITO</h2>
+        <button id="close-cart" class="close-cart-btn">&times;</button>
+    </div>
+    <div id="cart-items-container" class="cart-items">
+        </div>
+    <div class="cart-footer">
+        <div class="total-row">
+            <span>TOTAL:</span>
+            <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn" style="width:100%; border-color:white;">PAGAR AHORA</button>
+    </div>
+</div>
 </body>
 </html>

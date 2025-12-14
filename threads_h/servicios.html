@@ -4,9 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Urban Threads</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para formularios de Urban Threads */
+        .auth-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .form-box {
+            background: #f9f9f9;
+            border: 3px solid #000;
+            padding: 2rem;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        .form-group input:focus {
+            border-color: #ff6600; /* Naranja corporativo */
+            outline: none;
+        }
+        .btn-submit {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #ff6600;
+            color: #000;
+        }
+        
+        /* Estilo para la sección de historia */
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
     <header>
     <div class="header-content" style="display: flex; justify-content: space-between; align-items: center;">
@@ -15,18 +74,38 @@
 
         <nav>
             <ul>
-                <li><a href="../index.html">HOGAR</a></li>
-                <li><a href="../threads_h/hombres.html">HOMBRE</a></li>
-                <li><a href="Mujer.html">MUJER</a></li>
-                <li><a href="servicios.html">SERVICIOS</a></li>
+                <li><a href="index.html">HOGAR</a></li>
+                <li><a href="hombres.html">HOMBRE</a>
+                    <ul>
+                        <li><a href="hombres.html#tenis">Tenis</a></li>
+                        <li><a href="hombres.html#hoodies">Hoodies</a></li>
+                        <li><a href="hombres.html#camisetas">Camisetas</a></li>
+                        <li><a href="hombres.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li> 
+                <li><a href="Mujer.html">MUJER</a>
+                    <ul>
+                        <li><a href="Mujer.html#calzado">Calzado</a></li>
+                        <li><a href="Mujer.html#hoodies">Hoodies</a></li>
+                        <li><a href="Mujer.html#camisetas">Camisetas</a></li>
+                        <li><a href="Mujer.html#pantalones">Pantalones</a></li>        
+                    </ul>
+                </li>
+                <li><a href="servicios.html">SERVICIOS</a>
+                    <ul>
+                        <li><a href="servicios.html#Micuenta">Mi cuenta</a></li>
+                        <li><a href="servicios.html#Listadedeseos">Lista de Deseos</a></li>
+                        <li><a href="servicios.html#Sobrenosotros">Sobre nosotros</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
         <div class="user-actions">
-            <a href="#" title="Mi Cuenta">
+            <a href="servicios.html#Micuenta" title="Mi Cuenta">
                 <i class="fa-solid fa-user"></i>
             </a>
-            <a href="#" onclick="alert('Tu carrito está vacío (Simulación)')" title="Carrito">
+            <a href="#" onclick="alert('Tu carrito está vacío')" title="Carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-count">0</span>
             </a>
@@ -52,39 +131,54 @@
         <small id="error-password" class="error-text"></small>
     </div>
     
-    <button type="submit" class="btn">Entrar al Barrio</button>
+    <button type="submit" class="btn-submit">Entrar al Barrio</button>
 </form>
                 </div>
 
                 <div class="form-box">
-                    <h3>¿Nuevo en las calles?</h3>
-                    <p style="margin-bottom:1rem;">Regístrate para obtener drops exclusivos.</p>
-                    <button class="btn" onclick="alert('Ir a formulario de registro completo (RF-CLI-1)')">Crear Cuenta</button>
-                </div>
+    <h3>REGISTRO / SIGN UP</h3>
+    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Únete para drops exclusivos y descuentos.</p>
+    
+    <form id="form-register">
+        <div class="form-group">
+            <label for="reg-name">A.K.A (Nombre de Usuario)</label>
+            <input type="text" id="reg-name" placeholder="Ej: UrbanKing90">
+            <small id="error-reg-name" class="error-text"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="reg-email">Email</label>
+            <input type="text" id="reg-email" placeholder="tu@email.com">
+            <small id="error-reg-email" class="error-text"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for="reg-password">Contraseña</label>
+            <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres">
+        </div>
+
+        <div class="form-group">
+            <label for="reg-confirm">Confirmar Contraseña</label>
+            <input type="password" id="reg-confirm" placeholder="Repite tu contraseña">
+            <small id="error-reg-pass" class="error-text"></small>
+        </div>
+        
+        <button type="submit" class="btn-submit">CREAR CUENTA</button>
+    </form>
+</div>
             </div>
         </section>
 
         <hr style="margin: 3rem 0; border-top: 2px dashed #ccc;">
 
         <section id="Listadedeseos">
-            <h2>Lista de Deseos</h2>
-            <p>Tus prendas guardadas para el próximo drop.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-                <article>
-                    <img src="https://placehold.co/200x200/e0e0e0/111?text=Saved+Item" alt="Guardado">
-                    <h3>Hoodie "Camo Spartan"</h3>
-                    <p>$25.00</p>
-                    <a href="producto-detalle.html" class="btn">Comprar Ahora</a>
-                </article>
-                <article>
-                    <img src="https://placehold.co/200x200/e0e0e0/111?text=Saved+Item" alt="Guardado">
-                    <h3>Sneaker "Future"</h3>
-                    <p>$35.00</p>
-                    <a href="producto-detalle.html" class="btn">Comprar Ahora</a>
-                </article>
-            </div>
-        </section>
+    <h2>Lista de Deseos</h2>
+    <p>Tus prendas guardadas para el próximo drop.</p>
+    
+    <div id="wishlist-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 20px;">
+        <p style="grid-column: 1/-1; text-align: center; color: #777;">Aún no has guardado nada en tu lista.</p>
+    </div>
+         </section>
 
         <hr style="margin: 3rem 0; border-top: 2px dashed #ccc;">
 
@@ -101,7 +195,7 @@
                     nuestra misión es traer el estilo de la calle a tu guardarropa digital.
                 </p>
                 <br>
-                <img src="../imagenes/logo.jpg" alt="Logo Urban Threads" style="max-width: 150px; border: 3px solid #000; margin-top: 1rem;">
+                <img src="imagenes/logo.jpg" alt="Logo Urban Threads" style="max-width: 150px; border: 3px solid #000; margin-top: 1rem;">
             </div>
         </section>
 
@@ -111,5 +205,21 @@
         <p>&copy; 2025 Urban Threads. Diseño inspirado en cultura Hip-Hop.</p>
     </footer>
     <script src="script.js"></script>
+    <div id="cart-overlay" class="overlay"></div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>TU CARRITO</h2>
+        <button id="close-cart" class="close-cart-btn">&times;</button>
+    </div>
+    <div id="cart-items-container" class="cart-items">
+        </div>
+    <div class="cart-footer">
+        <div class="total-row">
+            <span>TOTAL:</span>
+            <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn" style="width:100%; border-color:white;">PAGAR AHORA</button>
+    </div>
+</div>
 </body>
 </html>
