@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Urban Threads</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos exclusivos del Panel Admin */
+        .admin-container { 
+            display: flex; min-height: 100vh; 
+        }
+        .sidebar {
+            width: 250px; 
+            background: #000; 
+            color: #fff; 
+            padding: 20px;
+        }
+        .sidebar ul { 
+            display: flex; 
+            flex-direction: column;
+            gap: 0; 
+        }
+        .sidebar li { 
+            padding: 15px 10px; 
+            border-bottom: 1px solid #333; 
+            cursor: pointer; 
+        }
+        .sidebar li:hover, .sidebar li.active { 
+            background: var(--orange); 
+            color: #000; 
+            font-weight: bold; 
+        }
+        
+        .admin-content { 
+            flex: 1; 
+            padding: 40px; 
+            background: #f4f4f4; 
+        }
+        .panel-section { 
+            display: none; 
+        }
+        .panel-section.active { 
+            display: block;
+         }
+
+        /* Tablas Admin */
+        .admin-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+            background: #fff; 
+        }
+        .admin-table th, .admin-table td { 
+            border: 1px solid #ddd; 
+            padding: 12px; 
+            text-align: left; 
+        }
+        .admin-table th { 
+            background-color: #000; 
+            color: #fff; 
+        }
+        
+        /* Formulario de añadir producto */
+        .add-product-form {
+            background: #fff; 
+            padding: 20px; 
+            border: 2px solid #000; 
+            margin-bottom: 30px;
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2 style="margin-bottom: 30px;">URBAN ADMIN</h2>
+            <ul>
+                <li onclick="showPanel('dashboard')" class="active">Resumen / Reportes</li>
+                <li onclick="showPanel('products')"> Inventario & Productos</li>
+                <li onclick="showPanel('orders')">Pedidos & Envíos</li>
+                <li onclick="logout()" style="margin-top: 50px; color: red;"> Cerrar Sesión</li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            
+            <section id="dashboard" class="panel-section active">
+                <h1>Reporte de Ventas</h1>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+                    <div style="background: white; padding: 20px; border-left: 5px solid var(--orange);">
+                        <h3>Ventas Totales</h3>
+                        <p id="total-sales-amount" style="font-size: 2rem; font-weight: bold;">$0.00</p>
+                    </div>
+                    <div style="background: white; padding: 20px; border-left: 5px solid black;">
+                        <h3>Pedidos Pendientes</h3>
+                        <p id="pending-orders-count" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="background: white; padding: 20px; border-left: 5px solid green;">
+                        <h3>Usuarios Registrados</h3>
+                        <p style="font-size: 2rem; font-weight: bold;">12</p> </div>
+                </div>
+            </section>
+
+            <section id="products" class="panel-section">
+                <h1>Gestión de Inventario</h1>
+                
+                <div class="add-product-form">
+                    <h3 style="grid-column: 1/-1;">Agregar Nuevo Drop</h3>
+                    <input type="text" id="new-prod-name" placeholder="Nombre del Producto">
+                    <input type="number" id="new-prod-price" placeholder="Precio ($)">
+                    <select id="new-prod-category" style="padding: 10px;">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select>
+                    <input type="text" id="new-prod-img" placeholder="URL de la imagen">
+                    <button onclick="adminAddProduct()" class="btn" style="grid-column: 1/-1;">GUARDAR PRODUCTO</button>
+                </div>
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-products-list">
+                        </tbody>
+                </table>
+            </section>
+
+            <section id="orders" class="panel-section">
+                <h1>Control de Pedidos</h1>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID Pedido</th>
+                            <th>Cliente</th>
+                            <th>Total</th>
+                            <th>Estado Actual</th>
+                            <th>Actualizar Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-orders-list">
+                        </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Lógicapara tabs del admin
+        function showPanel(panelId) {
+            document.querySelectorAll('.panel-section').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.sidebar li').forEach(l => l.classList.remove('active'));
+            document.getElementById(panelId).classList.add('active');
+        }
+        
+        // Cargar datos al iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAdminProducts();
+            renderAdminOrders();
+        });
+    </script>
+</body>
+</html>

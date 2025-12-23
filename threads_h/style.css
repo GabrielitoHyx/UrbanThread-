@@ -1,4 +1,3 @@
-/* RESET & BASICS */
 :root {
     --black: #000000;
     --orange: #D35400;
@@ -13,7 +12,7 @@
 }
 
 body {
-    font-family: 'Arial Black', 'Helvetica', sans-serif; /* Tipografía gruesa */
+    font-family: 'Arial Black', 'Helvetica', sans-serif; 
     background-color: var(--white);
     color: var(--black);
     line-height: 1.6;
@@ -213,7 +212,7 @@ article p {
     }
 }
 
-/* Estilos para los Submenús (Dropdowns) */
+/* Estilos para los Submenús */
 nav ul li {
     position: relative; /* Necesario para posicionar el submenú */
 }
@@ -321,8 +320,6 @@ article img {
     object-fit: cover; /* Recorta la imagen para llenar el cuadro sin deformar */
     border-bottom: 3px solid #000;
 }
-/* --- AGREGAR AL FINAL DE STYLE.CSS --- */
-
 /* 1. Estilos de Selección de Talla */
 .size-btn {
     transition: all 0.2s ease;
@@ -334,7 +331,7 @@ article img {
     box-shadow: 3px 3px 0px var(--orange);
 }
 
-/* 2. Estilos del Modal (Zoom) */
+/* 2. Zoom */
 .modal {
     display: none; 
     position: fixed; 
@@ -363,7 +360,7 @@ article img {
 /* 3. Estilos del Carrito Lateral */
 .cart-sidebar {
     height: 100%;
-    width: 0; /* Oculto por defecto */
+    width: 0; 
     position: fixed;
     z-index: 1500;
     top: 0; right: 0;
